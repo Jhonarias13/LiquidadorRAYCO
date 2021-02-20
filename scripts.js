@@ -10,7 +10,7 @@
         const numberFormat = new Intl.NumberFormat("en-US");
 
         //variables
-        let inputNumeroUno, cociente, producto;
+        let inputNumeroUno, producto;
 
         //eventos
         btnSubmit.addEventListener('click', liquidar);
