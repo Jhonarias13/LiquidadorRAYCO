@@ -1,0 +1,28 @@
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+.form label {
+    margin-bottom: 10px;
+}
+
+.form input {
+    margin-bottom: 10px;
+}
+
+.form .botones {
+    max-width: 140px;
+}
+
+.baner {
+    margin-bottom: 30px;
+    padding: 10px 20px;
+    border-bottom: solid 1px rgb(92, 92, 92);
+}

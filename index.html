@@ -6,41 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="stylesheet" href="normalize.css">
+
+    <!-- fuentes de google -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap" rel="stylesheet">
+
+    <!--hoja de estilos -->
+    <link rel="stylesheet" href="style.css">
+
+
     <title>Formula de precios para RAYCO</title>
-
-    <!-- hoja de estilos -->
-    <style>
-        body {
-            font-family: 'Roboto', sans-serif;
-        }
-        
-        .form {
-            display: flex;
-            flex-direction: column;
-            max-width: 300px;
-            margin: 0 auto;
-        }
-        
-        .form label {
-            margin-bottom: 10px;
-        }
-        
-        .form input {
-            margin-bottom: 10px;
-        }
-        
-        .form .botones {
-            max-width: 140px;
-        }
-        
-        .baner {
-            margin-bottom: 30px;
-            padding: 10px 20px;
-            border-bottom: solid 1px rgb(92, 92, 92);
-        }
-    </style>
-
 </head>
 
 <body>
@@ -48,17 +22,13 @@
         Clinica del Celular - Precios RAYCO
     </div>
     <div class="centrado">
-
         <div class="form">
-            <label for="guessField">Precio para Tecnoclinica: </label><input type="text" id="precioTecno" step="0.01" min="0" class="precios">
-            <label for="guessField">Precio para RAYCO: </label><input type="text" id="precioRAYCO" class="precios">
+            <label>Precio para Tecnoclinica: </label><input type="number" id="precioTecno" step="0.01" min="0" class="precios">
+            <label>Precio para RAYCO: </label><input type="text" id="precioRAYCO" class="precios">
             <input type="submit" value="CALCULAR" id="submit" class="botones">
             <input type="submit" value="LIMPIAR" id="limpiar" class="botones">
         </div>
-
     </div>
-
-
     <script src="scripts.js"></script>
 </body>
 

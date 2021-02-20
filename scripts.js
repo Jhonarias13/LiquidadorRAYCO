@@ -1,29 +1,32 @@
-const precioTecno = document.querySelector('#precioTecno');
-const precioRAYCO = document.querySelector('#precioRAYCO');
-const btnSubmit = document.querySelector('#submit');
-const btnLimpiar = document.querySelector('#limpiar')
-const porcentaje = 15 / 100;
-const valorAdicional = 30000
+(function() {
+    "use strict";
+    document.addEventListener('DOMContentLoaded', function() {
 
-let inputNumeroUno, cociente, producto;
+        const precioTecno = document.querySelector('#precioTecno');
+        const precioRAYCO = document.querySelector('#precioRAYCO');
+        const btnSubmit = document.querySelector('#submit');
+        const btnLimpiar = document.querySelector('#limpiar');
+        const incremento = 30000;
+        const numberFormat = new Intl.NumberFormat("en-US");
 
-function mensaje() {
-    inputNumeroUno = parseInt(precioTecno.value);
-    // let inputNumeroDos = parseInt(precioRAYCO.value);
+        //variables
+        let inputNumeroUno, cociente, producto;
 
-    cociente = (inputNumeroUno + valorAdicional) * porcentaje;
-    producto = inputNumeroUno + valorAdicional + cociente;
+        //eventos
+        btnSubmit.addEventListener('click', liquidar);
+        btnLimpiar.addEventListener('click', limpiar);
 
-    precioRAYCO.value = '$ ' + producto;
+        //funciones
+        function liquidar() {
+            inputNumeroUno = precioTecno.value;
+            producto = (parseInt(inputNumeroUno) + parseInt(incremento)) * 1.15;
+            precioRAYCO.value = '$ ' + numberFormat.format(producto);
+        }
 
-}
-
-function limpiar() {
-    precioTecno.value = '';
-    precioTecno.focus();
-
-    precioRAYCO.value = '';
-}
-
-btnSubmit.addEventListener('click', mensaje);
-btnLimpiar.addEventListener('click', limpiar);
+        function limpiar() {
+            precioTecno.value = '';
+            precioTecno.focus();
+            precioRAYCO.value = '';
+        }
+    });
+}());
