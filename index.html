@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -13,22 +13,29 @@
     <!--hoja de estilos -->
     <link rel="stylesheet" href="style.css">
 
-
-    <title>Formula de precios para RAYCO</title>
+    <title>Liquidador de precios RAYCO</title>
 </head>
 
 <body>
     <div class="baner">
-        Clinica del Celular - Precios RAYCO
+        Clinica del Celular San Gil - Precios RAYCO
     </div>
     <div class="centrado">
         <div class="form">
-            <label>Precio para Tecnoclinica: </label><input type="number" id="precioTecno" step="0.01" min="0" class="precios">
-            <label>Precio para RAYCO: </label><input type="text" id="precioRAYCO" class="precios">
-            <input type="submit" value="CALCULAR" id="submit" class="botones">
-            <input type="submit" value="LIMPIAR" id="limpiar" class="botones">
+            <label>Precio para Tecnoclinica: </label>
+            <input type="number" id="precioTecno" step="0.01" min="0" class="precios">
+            <label>Precio para RAYCO: </label>
+            <input type="text" id="precioRAYCO" class="precios">
+
+            <div class="ContenedorBtn">
+                <input type="submit" value="CALCULAR" id="submit" class="botones">
+                <input type="submit" value="LIMPIAR" id="limpiar" class="botones">
+            </div>
         </div>
     </div>
+    <footer class="footer">
+        <p> <span> <> </span> Desarrollado por Jhon Freiman Arias <span> <> </span></p>
+    </footer>
     <script src="scripts.js"></script>
 </body>
 
