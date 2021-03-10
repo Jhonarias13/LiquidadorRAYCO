@@ -1,27 +1,30 @@
 body {
     font-family: 'Roboto', sans-serif;
     font-size: 1.1em;
+    overflow: hidden;
+    height: 100vh;
 }
 
 .form {
     display: flex;
     flex-direction: column;
+    max-width: 300px;
     margin: 0 auto;
 }
 
-@media (min-width: 360px) {
+@media (min-width: 1200px) {
     .form {
-        max-width: 300px;
-        margin: 0 auto;
+        max-width: 600px;
+    }
+    .form input {
+        width: 550px;
+        height: 40px;
+        margin: 0 auto 30px;
     }
 }
 
 .form label {
     margin-bottom: 10px;
-}
-
-.form input {
-    margin-bottom: 30px;
 }
 
 .form .botones {
@@ -48,12 +51,30 @@ body {
     color: white;
 }
 
+@media (min-width: 1200px) {
+    .footer {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        left: 0;
+    }
+}
+
 .footer p {
-    font-size: 0.7em;
+    font-size: 1.5vw;
     margin-top: 150px;
     text-align: center;
 }
 
 .footer span {
     color: blue;
+}
+
+.footer p a {
+    text-decoration: none;
+    color: black;
+}
+
+.footer p a:hover {
+    color: rgba(0, 0, 0, .6);
 }
